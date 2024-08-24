@@ -38,12 +38,12 @@ The purpose of this mechanism is to allow Heirs to access assets after a certain
 - using ENS for the heirs' address is a good idea, this allows heirs to use easily memorable names instead of complex Ethereum addresses, significantly improving accessibility and user experience.
 
 ### - Other application usecase
-- In addition to transfer the asset to heirs' wallet once and for all, can implement a  
+- In addition to transfer the asset to heirs' wallet once and for all, can implement something like streaming.
 
 ## How to Use? 
 During the hackathon we were only able to implement the smart contract part without a workable front/backend integration project, you can still see our progress on the integration [here](https://github.com/tjjd4/hackathon_tokyo), let me introduce how do you operate it on the blockchain explorer:
 
-0. Prepare at least 3 account, account1 act as Predecessor and account2,3 act as Heirs.
+0. Prepare at least 3 account, account1 act as Predecessor and account2 and account3 act as Heirs.
 1. connect account1, deploy Predecessor CA from the ContractAccountFactory, simply call the first function `createContractAccount`.
 2. connect account1, deploy Vault from the VaultFactory, make sure to input the owner[] and the Predecessor CA address you deployed in the first step.
 3. On Predecessor CA, account1 as the Predecessor set `nominee` to the Vault address you deployed in the second step and set `timeset`. For testing, you can try 100. 
